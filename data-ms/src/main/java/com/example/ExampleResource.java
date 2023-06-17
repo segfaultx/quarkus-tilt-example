@@ -18,4 +18,9 @@ public class ExampleResource {
     public String hello() {
         return exampleRestService.getData();
     }
+
+    @GET
+    @Path("/goodbye")
+    @Produces(MediaType.TEXT_PLAIN)
+    public String getGoodbyeMsData(){ return exampleRestService.getGoodbyeMsData(); }
 }
