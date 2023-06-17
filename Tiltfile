@@ -2,10 +2,10 @@ version_settings(constraint='>=0.22.2')
 
 local_resource(
   'data-ms-resource',
-  'cd hello-ms &&' +
+  'cd data-ms &&' +
   './gradlew clean build',
   deps=['data-ms/src', 'build.gradle'],
-  labels=['hello-ms-resource']
+  labels=['data-ms-resource']
  )
 
 docker_build(

@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-ms-deployment
+  name: data-ms-deployment
 spec:
   selector:
     matchLabels:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: data-ms
-          image: hello-ms
+          image: data-ms
           ports:
             - containerPort: 8080
               name: api-port
@@ -25,7 +25,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello-ms-service
+  name: data-ms-service
 spec:
   ports:
     - port: 8080
