@@ -6,14 +6,13 @@ import jakarta.ws.rs.Path;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 import org.jboss.resteasy.reactive.RestQuery;
 
+@Path("/person")
 @RegisterRestClient
 public interface MongodbServiceRestClient {
 
     @POST
-    @Path("/person")
     void createPerson();
 
     @GET
-    @Path("/person")
-    String getPersonByName(@RestQuery String name);
+    Person getPersonByName(@RestQuery String name);
 }

@@ -36,7 +36,7 @@ public class ExampleResource {
 
     @GET
     @Path("/person")
-    public String getPersonByName(@RestQuery String name) {
+    public Person getPersonByName(@RestQuery String name) {
         return exampleRestService.getPersonByName(name);
     }
 }

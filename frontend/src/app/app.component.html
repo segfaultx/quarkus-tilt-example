@@ -9,6 +9,6 @@
     <button (click)="createRandomPerson()">Create random person</button>
   </div>
   <div>
-    <button (click)="getPersonByName()">Get person by name</button><input type="text" (input)="personSearchQuery = $any($event.target).value"><span> {{}}</span>
+    <button (click)="getPersonByName()">Get person by name</button><input type="text" (input)="personSearchQuery = $any($event.target).value"><span> {{JSON.stringify(personText)}}</span>
   </div>
 </div>

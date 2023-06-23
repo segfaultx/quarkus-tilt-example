@@ -15,7 +15,7 @@ public class PersonService {
     public void createPerson() {
         var person = new Person();
 
-        person.name = "test %d".formatted(new Random().nextInt(100));
+        person.name = "test-%d".formatted(new Random().nextInt(100));
         person.birth = LocalDate.now();
 
         personRepository.persist(person);

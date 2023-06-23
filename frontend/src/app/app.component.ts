@@ -35,4 +35,6 @@ export class AppComponent implements OnInit{
   getPersonByName() {
     this.httpClient.get<string>(`/api/person?name=${this.personSearchQuery}`).subscribe(response => this.personText = response)
   }
+
+  protected readonly JSON = JSON;
 }
