@@ -45,3 +45,24 @@ k8s_resource(
      labels=['goodbye-ms'],
      resource_deps=['goodbye-ms-resource']
 )
+
+docker_build(
+     'mongodb-ms',
+     context='./mongodb-service',
+     dockerfile='./mongodb-service/src/main/docker/Dockerfile.jvm'
+)
+
+k8s_yaml('mongodb-service/deployment/deployment.yaml')
+
+k8s_resource(
+     'mongodb-ms-deployment',
+     labels=['mongodb-ms'],
+)
+
+k8s_yaml('mongodb-service/deployment/db-deployment.yaml')
+
+k8s_resource(
+    'mongo-db-deployment',
+    port_forwards='27017:27017',
+    labels=['mongodb-ms']
+)

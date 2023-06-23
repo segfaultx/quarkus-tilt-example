@@ -22,7 +22,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: goodbye-ms-service
+  name: goodbye-service
 spec:
   ports:
     - port: 8080

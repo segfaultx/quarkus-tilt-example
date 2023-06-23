@@ -12,9 +12,18 @@ public class ExampleRestService {
     @RestClient
     GoodbyeMsRestClient goodbyeMsRestClient;
 
+    @RestClient
+    MongodbServiceRestClient mongodbServiceRestClient;
+
     public String getData() {
         return restClient.getExampleData("");
     }
 
-    public String getGoodbyeMsData() { return goodbyeMsRestClient.getGoodbyeText(); }
+    public String getGoodbyeMsData() {
+        return goodbyeMsRestClient.getGoodbyeText();
+    }
+
+    public void createPerson() {
+        mongodbServiceRestClient.createPerson();
+    }
 }

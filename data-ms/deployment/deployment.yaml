@@ -22,7 +22,9 @@ spec:
             - name: numbers-api.host
               value: http://numbersapi.com
             - name: goodbye-api.host
-              value: goodbye-ms-service
+              value: goodbye-service
+            - name: mongodb-service.host
+              value: mongodb-service
 ---
 apiVersion: v1
 kind: Service
