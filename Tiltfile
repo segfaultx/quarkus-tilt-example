@@ -1,5 +1,6 @@
 version_settings(constraint='>=0.22.2')
 
+# DATA MICROSERVICE
 local_resource(
   'data-ms-resource',
   'cd data-ms &&' +
@@ -23,7 +24,7 @@ k8s_resource(
      resource_deps=['data-ms-resource']
 )
 
-
+# GOODBYE MICROSERVICE
 local_resource(
   'goodbye-ms-resource',
   'cd goodbye-ms &&' +
@@ -46,6 +47,7 @@ k8s_resource(
      resource_deps=['goodbye-ms-resource']
 )
 
+# MONGODB MICROSERVICE
 docker_build(
      'mongodb-ms',
      context='./mongodb-service',
@@ -59,6 +61,7 @@ k8s_resource(
      labels=['mongodb-ms'],
 )
 
+# MONGODB
 k8s_yaml('mongodb-service/deployment/db-deployment.yaml')
 
 k8s_resource(
@@ -66,3 +69,5 @@ k8s_resource(
     port_forwards='27017:27017',
     labels=['mongodb-ms']
 )
+
+# ANGULAR FRONTEND

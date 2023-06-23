@@ -33,9 +33,9 @@ metadata:
 spec:
   ports:
     - port: 8080
-      targetPort: 8080
+      targetPort: api-port
       protocol: TCP
-      name: api-port
+      name: backend-port
   selector:
     app: data_ms
-  type: NodePort
+  type: ClusterIP

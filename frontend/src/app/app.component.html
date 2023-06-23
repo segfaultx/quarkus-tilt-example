@@ -1,0 +1,14 @@
+<div>
+  <div>
+    <button (click)="fetchExample()">Refetch</button><span><b>/api/example endpoint: </b> {{example}}</span>
+  </div>
+  <div>
+    <button (click)="fetchGoodbye()">Refetch</button><span><b>/api/goodbye endpoint: </b> {{goodbye}}</span>
+  </div>
+  <div>
+    <button (click)="createRandomPerson()">Create random person</button>
+  </div>
+  <div>
+    <button (click)="getPersonByName()">Create random person</button><input type="text" (input)="personSearchQuery = $any($event.target).value">
+  </div>
+</div>
