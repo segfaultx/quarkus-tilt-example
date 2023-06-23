@@ -26,4 +26,8 @@ public class ExampleRestService {
     public void createPerson() {
         mongodbServiceRestClient.createPerson();
     }
+
+    public String getPersonByName(String name) {
+        return mongodbServiceRestClient.getPersonByName(name);
+    }
 }

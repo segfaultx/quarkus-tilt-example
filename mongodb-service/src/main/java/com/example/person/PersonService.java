@@ -20,4 +20,8 @@ public class PersonService {
 
         personRepository.persist(person);
     }
+
+    public Person getPersonByName(String name) {
+        return personRepository.findByName(name);
+    }
 }

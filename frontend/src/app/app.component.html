@@ -9,6 +9,6 @@
     <button (click)="createRandomPerson()">Create random person</button>
   </div>
   <div>
-    <button (click)="getPersonByName()">Create random person</button><input type="text" (input)="personSearchQuery = $any($event.target).value">
+    <button (click)="getPersonByName()">Get person by name</button><input type="text" (input)="personSearchQuery = $any($event.target).value"><span> {{}}</span>
   </div>
 </div>
