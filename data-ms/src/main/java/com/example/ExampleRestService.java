@@ -30,4 +30,8 @@ public class ExampleRestService {
     public Person getPersonByName(String name) {
         return mongodbServiceRestClient.getPersonByName(name);
     }
+
+    public Person getPersonByNamePanache(String name) {
+        return mongodbServiceRestClient.getPersonByNamePanache(name);
+    }
 }

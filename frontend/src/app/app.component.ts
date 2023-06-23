@@ -10,7 +10,9 @@ export class AppComponent implements OnInit{
   example = ''
   goodbye = ''
   personSearchQuery = ''
+  personSearchQueryPanache = ''
   personText: any
+  personTextPanache: any
 
   httpClient = inject(HttpClient)
 
@@ -33,8 +35,11 @@ export class AppComponent implements OnInit{
   }
 
   getPersonByName() {
-    this.httpClient.get<string>(`/api/person?name=${this.personSearchQuery}`).subscribe(response => this.personText = response)
+    this.httpClient.get<string>(`/api/person?name=${this.personSearchQuery}`).subscribe(response => this.personText = JSON.stringify(response))
   }
 
-  protected readonly JSON = JSON;
+
+  getPersonByNamePanache() {
+    this.httpClient.get<string>(`/api/person/panache?name=${this.personSearchQueryPanache}`).subscribe(response => this.personTextPanache = JSON.stringify(response))
+  }
 }

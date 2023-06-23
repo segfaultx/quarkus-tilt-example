@@ -26,4 +26,10 @@ public class ExampleResource {
     public Person getPersonByName(@RestQuery String name) {
         return personService.getPersonByName(name);
     }
+
+    @GET
+    @Path("/panache")
+    public Person getPersonByNamePanache(@RestQuery String name) {
+        return personService.getPersonByNamePanacheEntity(name);
+    }
 }

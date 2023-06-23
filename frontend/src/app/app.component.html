@@ -9,6 +9,9 @@
     <button (click)="createRandomPerson()">Create random person</button>
   </div>
   <div>
-    <button (click)="getPersonByName()">Get person by name</button><input type="text" (input)="personSearchQuery = $any($event.target).value"><span> {{JSON.stringify(personText)}}</span>
+    <button (click)="getPersonByName()">Get person by name</button><input type="text" (input)="personSearchQuery = $any($event.target).value"><span> {{personText}}</span>
+  </div>
+  <div>
+    <button (click)="getPersonByNamePanache()">Get person by name (panache simplified orm)</button><input type="text" (input)="personSearchQueryPanache = $any($event.target).value"><span> {{personTextPanache}}</span>
   </div>
 </div>

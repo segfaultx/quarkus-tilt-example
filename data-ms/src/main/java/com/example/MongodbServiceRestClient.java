@@ -15,4 +15,8 @@ public interface MongodbServiceRestClient {
 
     @GET
     Person getPersonByName(@RestQuery String name);
+
+    @GET
+    @Path("/panache")
+    Person getPersonByNamePanache(@RestQuery String name);
 }
