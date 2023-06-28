@@ -69,5 +69,3 @@ k8s_resource(
     port_forwards='27017:27017',
     labels=['mongodb-ms']
 )
-
-# ANGULAR FRONTEND
