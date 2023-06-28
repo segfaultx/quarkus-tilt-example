@@ -1,4 +1,4 @@
-version_settings(constraint='>=0.22.2')
+version_settings(constraint='>=0.30.0')
 
 # DATA MICROSERVICE
 local_resource(
