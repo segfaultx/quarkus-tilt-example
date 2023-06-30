@@ -7,7 +7,7 @@ import java.time.LocalDate;
 
 @MongoEntity
 public class Person {
-    public ObjectId _id;
+    public ObjectId id; // used by MongoDB for the _id field
     public String name;
     public LocalDate birth;
 }
