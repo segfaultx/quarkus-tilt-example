@@ -1,6 +1,7 @@
 package com.example;
 
 import com.example.person.Person;
+import com.example.person.PersonPanache;
 import com.example.person.PersonService;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
@@ -29,7 +30,7 @@ public class ExampleResource {
 
     @GET
     @Path("/panache")
-    public Person getPersonByNamePanache(@RestQuery String name) {
+    public PersonPanache getPersonByNamePanache(@RestQuery String name) {
         return personService.getPersonByNamePanacheEntity(name);
     }
 }

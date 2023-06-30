@@ -25,7 +25,7 @@ public class PersonService {
         return personRepository.findByName(name);
     }
 
-    public Person getPersonByNamePanacheEntity(String name) {
-        return Person.find("name", name).firstResult();
+    public PersonPanache getPersonByNamePanacheEntity(String name) {
+        return PersonPanache.find("name", name).firstResult();
     }
 }
